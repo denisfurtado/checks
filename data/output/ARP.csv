@@ -1,0 +1,5 @@
+﻿cif;guerra;funcao;cargo;base;checkTypeCode;expiryDt;course_name;status;nota;data_conclusao;code;dep;inss;lnr;tempo_de_conclusao (dias);atualizar
+00001593;MARCIO MIGUEIS;CMT;;CGH;ARP;2016-12-31;;;;2035-12-31;C-ARP-ON;2020-06-04;;LIC-SREM;-5465;False
+00002744;SANTA CRUZ;CMT;;GRU;ARP;2021-01-15;;;;2035-12-31;C-ENS-ARP;2020-01-16;;LIC-SREM;-5465;False
+00031915;OBERDAM REZENDE;COP;;GRU;ARP;2021-01-15;Tripulação Técnica - Artigos Perigosos Categoria 10;Em andamento;0,00;2035-12-31;C-ARP-ON;2021-01-05;;;-5465;False
+00032347;KRANERT;CMT;;GRU;ARP;2021-01-23;;;;2035-12-31;C-ENS-ARP;2020-01-24;INSS;;-5465;False

@@ -1,0 +1,123 @@
+
+<body>
+    <meta charset="utf-8"/>
+    <style>
+        /* Remove space around the email design. */
+        html, body {
+            margin: 0 auto !important;
+            padding: 0 !important;
+            height: 100% !important;
+            width: 100% !important;
+        }
+        /* Stop Outlook resizing small text. */
+        * {
+            -ms-text-size-adjust: 100%;
+        }
+        /* Stop Outlook from adding extra spacing to tables. */
+        table, td {
+            mso-table-lspace: 0pt !important;
+            mso-table-rspace: 0pt !important;
+        }
+        /* Use a better rendering method when resizing images in Outlook IE. */
+        img {
+            -ms-interpolation-mode:bicubic;
+        }
+      /* Prevent Windows 10 Mail from underlining links. Styles for underlined links should be inline. */
+        a {
+            text-decoration: none;
+        }
+    </style>
+
+    <table style="width: 100%;">
+        <table style="width: 1300;" align="center">
+            <tr>
+                <td>
+                    <p>Olá pessoal,</p>
+                    <p>Este é um e-mail gerado automaticamente para alertar sobre inconsistências de <b>Checks</b>.</p>
+                    <p>Favor verificar os casos dos tripulantes listados abaixo:</p>
+                    <p></p>
+                </td>
+            </tr>
+            <tr>
+                <td>&nbsp</td>
+            </tr>
+            <tr>
+                <td id="content">
+                    
+                    <table 
+                    width="100%"
+                    role="presentation"
+                    cellspacing=“0”
+                    cellpadding=“0” 
+                    style="border-collapse: collapse;"
+                    >
+                        <tbody>
+                            <thead><tr style="font-size: 12px; 
+                            font-weight: 600; 
+                            color: black;
+                            border-bottom-width: 1px;
+                            border-bottom-style: solid;
+                            ">
+                                <td>CIF</td>
+                                <td>NOME</td>
+                                <td>FUNÇÃO</td>
+                                <td>BASE</td>
+                                <td>CHECK</td>
+                                <td>VALIDADE</td>
+                                <td>STATUS</td>
+                                <td>NOTA</td>
+                                <td>DATA DE CONCLUSÃO</td>
+                                <td>ATIVIDADE</td>
+                                <td>DIA DA ATIVIDADE</td>
+                                <td>TEMPO DE CONCLUSÃO (dias)</td>
+                                <td>ATUALIZAR</td>
+                            </tr></thead>
+
+                            {% for d in data %}
+                            <tr style="
+                            font-size: 10,5px;
+                            margin-top: 5px;
+                            margin-bottom: 5px;
+                            background-color: #f0f0f0;
+                            {% if loop.index is divisibleby 2 %}
+                            background-color: #ffffff;
+                            {% endif %}  
+                            ">
+                                <td>{{d['cif']}}</td>
+                                <td>{{d['guerra']}}</td>
+                                <td>{{d['funcao']}}</td>
+                                <td>{{d['base']}}</td>
+                                <td>{{d['checkTypeCode']}}</td>
+                                <td>{{d['expiryDt']}}</td>
+                                <td>{{d['status']}}</td>
+                                <td>{{d['nota']}}</td>
+                                <td>{{d['data_conclusao']}}</td>
+                                <td>{{d['code']}}</td>
+                                <td>{{d['dep']}}</td>
+                                <td>{{d['tempo_de_conclusao (dias)']}}</td>
+                                <td>{{d['atualizar']}}</td>
+                            </tr>
+                            {% endfor %}
+                            
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td>&nbsp</td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Na impossibilidade de corrigir a irregularidade, favor informar aos responsáveis através dos e-mails abaixo:</p>
+                    <p>Marina Prado - Controlador - mvprado@voegol.com.br</p>
+                    <p>Joyce Diogenes - Analista - jdsousa@voegol.com.br</p>
+                    <p>David Louzada - Coordenador - dclouzada@voegol.com.br</p>
+                    <p>Alexandre Gandini - Gerente - amagandini@voegol.com.br</p>
+                    <p>Grato,</p>
+                    <br></br>
+                    <p><b>Gerência de Escala</b></p>
+                </td>
+            </tr>
+        </table>
+    </table>
+</body>
